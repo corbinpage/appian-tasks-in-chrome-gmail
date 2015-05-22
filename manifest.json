@@ -2,6 +2,11 @@
   "name": "Appian Tasks in Gmail",
   "description": "Display Appian Tasks in Gmail using the Streak Gmail SDK",
   "version": "0.1",
+  "browser_action": {
+    "default_icon": "chrome-extension/spy-icon-19.png",
+    "default_title": "Blast the typo!",
+    "default_popup": "chrome-extension/popup.html"
+  },
   "content_scripts": [
     {
       "matches": [
@@ -15,7 +20,9 @@
   "permissions": [
     "https://mail.google.com/",
     "https://inbox.google.com/",
+    "https://appswest.princetonblue.net:8443/",
     "activeTab"
   ],
+  "content_security_policy": "script-src 'unsafe-inline' https://appswest.princetonblue.net:8443/; object-src 'self'",
   "manifest_version": 2
 }
