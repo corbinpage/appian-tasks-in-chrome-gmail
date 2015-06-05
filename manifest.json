@@ -13,16 +13,15 @@
         "https://mail.google.com/*",
         "https://inbox.google.com/*"
       ],
-      "js": ["inboxsdk.js","jquery-1.11.1.min.js","content.js"],
+      "js": ["inboxsdk.js","jquery-1.11.1.min.js","content.js","taskDataJson.json"],
+      "css":["style.css"],
       "run_at": "document_end"
     }
   ],
   "permissions": [
     "https://mail.google.com/",
     "https://inbox.google.com/",
-    "https://appswest.princetonblue.net:8443/",
     "activeTab"
   ],
-  "content_security_policy": "script-src 'unsafe-inline' https://appswest.princetonblue.net:8443/; object-src 'self'",
   "manifest_version": 2
 }
