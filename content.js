@@ -49,6 +49,10 @@ function createContainer(){
 	var taskListDiv  = document.createElement('div');
 	taskListDiv.className = 'appian-task-list';
 
+	var headerBar  = document.createElement('div');
+	headerBar.className = 'header-bar';
+	taskListDiv.appendChild(headerBar);
+
 	return taskListDiv;
 }
 
@@ -78,7 +82,7 @@ function tableCreate(taskList){
 		var tr = tbody.insertRow();
 		for(var j = 0; j < taskList.columnConfigs.length; j++){
 			var td = tr.insertCell();
-			if(j=0) {
+			if(j===0) {
 				var link = document.createElement('a');
 				link.href = '#';
 				link.setAttribute('target', '_blank');
