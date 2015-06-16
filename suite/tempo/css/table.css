@@ -1,0 +1,346 @@
+.appian-body
+.aui-DataGrid-Table table{width:100%;padding:0;font-size:13px;border-collapse:separate;*border-collapse:collapse;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}
+
+.appian-body
+.aui-DataGrid-Table table th,
+.appian-body
+.aui-DataGrid-Table table td{padding:9px 8px 8px;text-align:left;word-wrap:break-word;}
+
+.appian-body
+.aui-DataGrid-Table th>ul>li>a{font-weight:bold}
+
+.appian-body
+.aui-DataGrid-Table .dropdown-menu.grid_filter{top:22px;border-width:1px;border-radius:6px;min-width:240px}
+
+.appian-body
+.aui-DataGrid-Table .dropdown-menu legend{padding:4px 0 10px}
+
+.appian-body
+.aui-DataGrid-Table .dropdown-menu input.searchbox_main{font-size:13px;padding:3px 26px 3px 3px}
+
+.appian-body
+.aui-DataGrid-Table ol.facetgroup.grid_filter{margin:3px 0}
+
+.appian-body
+.aui-DataGrid-Table ol.facetgroup.grid_filter li{padding:3px}
+
+.appian-body
+.aui-DataGrid-Table ol.facetgroup.grid_filter label{font-size:13px}
+
+.appian-body
+.aui-DataGrid-Table td{min-height:20px}
+
+.appian-body
+.aui-DataGrid-Table tr.newitem td:first-child{padding-left:6px}
+
+.appian-body
+.aui-DataGrid-Table table tr.footer td img{vertical-align:-2px;margin:0 3px 0 10px}
+
+.appian-body
+.aui-DataGrid-Table tr.empty_msg td{text-align:center;height:60px}
+
+.appian-body
+.aui-DataGrid-Table table th,
+.appian-body
+.aui-DataGrid-Table table th a{font-weight:bold;vertical-align:middle}
+
+.appian-body
+.aui-DataGrid-Table table td{vertical-align:middle}
+
+.appian-body
+.aui-DataGrid-Table table td:focus{outline:0}
+
+.appian-body
+.aui-DataGrid-Table td.inline_editable{cursor:pointer}
+
+.appian-body
+.aui-DataGrid-Table tr.row_editable{cursor:pointer}
+
+.appian-body
+.aui-DataGrid-Table td.editing{padding:0;margin:0}
+
+.appian-body
+.aui-DataGrid-Table td.inline_editable .display_state{display:inline}
+
+.appian-body
+.aui-DataGrid-Table td.inline_editable .edit_state{display:none}
+
+.appian-body
+.aui-DataGrid-Table td.inline_editable.editing .display_state{display:none}
+
+.appian-body
+.aui-DataGrid-Table td.inline_editable.editing .edit_state{display:inline}
+
+.appian-body
+.aui-DataGrid-Table th.center,
+.appian-body
+.aui-DataGrid-Table td.center{text-align:center}
+
+.appian-body
+.aui-DataGrid-Table th.right,
+.appian-body
+.aui-DataGrid-Table td.right{text-align:right}
+
+.appian-body
+.aui-DataGrid-Table .right .dropdown-menu{text-align:left}
+
+.appian-body
+.aui-DataGrid-Table thead tr:first-child th:first-child{-webkit-border-radius:4px 0 0 0;-moz-border-radius:4px 0 0 0;border-radius:4px 0 0 0}
+
+.appian-body
+.aui-DataGrid-Table thead tr:first-child th:last-child{-webkit-border-radius:0 4px 0 0;-moz-border-radius:0 4px 0 0;border-radius:0 4px 0 0}
+
+.appian-body
+.aui-DataGrid-Table table:not(.has_footer) tbody tr:last-child td:first-child{-webkit-border-radius:0 0 0 4px;-moz-border-radius:0 0 0 4px;border-radius:0 0 0 4px}
+
+.appian-body
+.aui-DataGrid-Table table:not(.has_footer) tbody tr:last-child td:last-child{-webkit-border-radius:0 0 4px 0;-moz-border-radius:0 0 4px 0;border-radius:0 0 4px 0}
+
+.appian-body
+.aui-DataGrid-Table th.sortable{padding-right:22px}
+
+.appian-body
+.aui-DataGrid-Table th.sortable.direct{cursor:pointer}
+
+.appian-body
+.aui-DataGrid-Table th.sortable.right{padding-left:22px;padding-right:8px}
+
+.appian-body
+.aui-DataGrid-Table th.sortable.center{padding-left:14px;padding-right:14px}
+
+.appian-body
+.aui-DataGrid-Table .paging_controls{float:right}
+
+.appian-body
+.aui-DataGrid-Table .paging_controls a,
+.appian-body
+.aui-DataGrid-Table .paging_controls span{margin-left:12px}
+
+.appian-body
+.aui-DataGrid-Table td.row_delete{text-align:center;min-width:16px}
+
+.appian-body
+.aui-DataGrid-Table td.row_delete img{width:13px;height:13px}
+
+.appian-body
+.aui-DataGrid-Table td.grid_error{font-size:14px;font-weight:bold;padding:6px 10px}
+
+.appian-body
+.aui-DataGrid-Table td.grid_error a{font-weight:bold}
+
+.appian-body
+.aui-DataGrid-Table .table_checked_item_menu{margin:2px 0 8px;position:relative;padding-left:36px}
+
+.appian-body
+.aui-DataGrid-Table .table_checked_item_menu a{font-size:12px;font-weight:bold;margin-right:4px;padding:3px 6px;border-radius:3px}
+
+.appian-body
+.aui-DataGrid-Table .table_checked_item_pointer{position:absolute;top:8px;left:14px;display:inline-block;width:17px;height:30px;opacity:.7}
+
+.appian-body
+.aui-DataGrid-Table table{border:1px solid #e9e9e9}
+
+.appian-body
+.aui-DataGrid-Table table td{border-top:1px solid #e9e9e9}
+
+.appian-body
+.aui-DataGrid-Table table tbody th{border-top:1px solid #e9e9e9}
+
+.appian-body
+.aui-DataGrid-Table table th,
+.appian-body
+.aui-DataGrid-Table table th a{color:#000}
+
+.appian-body
+.aui-DataGrid-Table table th:hover a,
+.appian-body
+.aui-DataGrid-Table table th a:focus{color:#285fab}
+
+.appian-body
+.aui-DataGrid-Table th+th,
+.appian-body
+.aui-DataGrid-Table td+td,
+.appian-body
+.aui-DataGrid-Table th+td{border-left:1px solid #e9e9e9}
+
+.appian-body
+.aui-DataGrid-Table tr.newitem td:first-child{border-left:2px solid #2ea218}
+
+.appian-body
+.aui-DataGrid-Table .striped tbody tr:nth-child(odd) td,
+.appian-body
+.aui-DataGrid-Table .striped tbody tr:nth-child(odd) th{background-color:#f7f7f7}
+
+.appian-body
+.aui-DataGrid-Table .striped tbody tr:nth-child(odd).checked td,
+.appian-body
+.aui-DataGrid-Table tr.checked td{background-color:#feffa7}
+
+.appian-body
+.aui-DataGrid-Table .striped tbody tr.footer:nth-child(odd) td{background-color:transparent}
+
+.appian-body
+.aui-DataGrid-Table tbody tr:hover td,
+.appian-body
+.aui-DataGrid-Table tbody tr:hover th,
+.appian-body
+.aui-DataGrid-Table .striped tbody tr:hover td{background-color:#e7f2f7}
+
+.appian-body
+.aui-DataGrid-Table tr.footer:hover td,
+.appian-body
+.aui-DataGrid-Table .striped tbody tr.footer:hover td{background-color:transparent}
+
+.appian-body
+.aui-DataGrid-Table td.editing input[type=text],
+.appian-body
+.aui-DataGrid-Table td.editing select{border:1px solid white}
+
+.appian-body
+.aui-DataGrid-Table td.editing input[type=text]:focus,
+.appian-body
+.aui-DataGrid-Table td.editing select:focus{border:1px solid #7aabcf;box-shadow:none}
+
+.appian-body
+.aui-DataGrid-Table th.sortable:hover,
+.appian-body
+.aui-DataGrid-Table th:focus,
+.appian-body
+.aui-DataGrid-Table td.inline_editable:focus{background-color:#e7f2f7}
+
+.appian-body
+.aui-DataGrid-Table th:hover>ul>li>a{color:#285fab}
+
+.appian-body
+.aui-DataGrid-Table th:not(.right):hover>ul>li>a:after{width:0;height:0;display:inline-block;content:".";text-indent:-99999px;color:transparent;vertical-align:middle;margin-left:3px;border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid #285fab}
+
+.appian-body
+.aui-DataGrid-Table th:hover>ul>li>a:hover,
+.appian-body
+.aui-DataGrid-Table th>ul>li>a:focus{color:#ee6615;outline:0}
+
+.appian-body
+.aui-DataGrid-Table th:not(.right):hover>ul>li>a:hover:after,
+.appian-body
+.aui-DataGrid-Table th:not(.right)>ul>li>a:focus:after{border-top:4px solid #ee6615}
+
+.appian-body
+.aui-DataGrid-Table th.right:hover>ul>li>a:before{width:0;height:0;display:inline-block;content:".";color:transparent;vertical-align:middle;margin-right:3px;border-left:4px solid transparent;border-right:4px solid transparent;border-top:4px solid #285fab}
+
+.appian-body
+.aui-DataGrid-Table th.right:hover>ul>li>a:hover:before,
+.appian-body
+.aui-DataGrid-Table th.right>ul>li>a:focus:before{border-top:4px solid #ee6615}
+
+.appian-body
+.aui-DataGrid-Table th.sortable.direct:hover,
+.appian-body
+.aui-DataGrid-Table th.sortable.direct:focus{background:url("../../tempo/img/sort_arrow_up.png") no-repeat scroll right center #e7f2f7}
+
+.appian-body
+.aui-DataGrid-Table th.sortable.direct.right:hover,
+.appian-body
+.aui-DataGrid-Table th.sortable.direct.right:focus{background:url("../../tempo/img/sort_arrow_up.png") no-repeat scroll left center #e7f2f7}
+
+.appian-body
+.aui-DataGrid-Table th.sortup{background:url("../../tempo/img/sort_arrow_up.png") no-repeat scroll right center transparent}
+
+.appian-body
+.aui-DataGrid-Table th.sortup.right{background:url("../../tempo/img/sort_arrow_up.png") no-repeat scroll left center transparent}
+
+.appian-body
+.aui-DataGrid-Table th.sortup:hover{background-color:#e7f2f7}
+
+.appian-body
+.aui-DataGrid-Table th.sortdown{background:url("../../tempo/img/sort_arrow_down.png") no-repeat scroll right center transparent}
+
+.appian-body
+.aui-DataGrid-Table th.sortdown.right{background:url("../../tempo/img/sort_arrow_down.png") no-repeat scroll left center transparent}
+
+.appian-body
+.aui-DataGrid-Table .paging_controls span{color:#aaa}
+
+.appian-body
+.aui-DataGrid-Table tr.deleted{background-color:#eee}
+
+.appian-body
+.aui-DataGrid-Table tr.deleted td{color:#aaa;text-decoration:line-through}
+
+.appian-body
+.aui-DataGrid-Table td.row_delete a{background:url("../../tempo/img/remove_x.png") no-repeat scroll center center transparent}
+
+.appian-body
+.aui-DataGrid-Table tr:hover td.row_delete a,
+.appian-body
+.aui-DataGrid-Table td.row_delete a:focus,
+.appian-body
+.aui-DataGrid-Table td:focus ~ td.row_delete a{background:url("../../tempo/img/remove_x_hover.png") no-repeat scroll center center transparent}
+
+.appian-body
+.aui-DataGrid-Table tr.deleted td.row_delete a{background:url("../../tempo/img/undo.png") no-repeat scroll center center transparent}
+
+.appian-body
+.aui-DataGrid-Table tr.deleted:hover td.row_delete a,
+.appian-body
+.aui-DataGrid-Table tr.deleted td.row_delete a:focus,
+.appian-body
+.aui-DataGrid-Table tr.deleted td:focus ~ td.row_delete a{background:url("../../tempo/img/undo_hover.png") no-repeat scroll center center transparent}
+
+.appian-body
+.aui-DataGrid-Table tr:hover td.row_delete{background-color:#e7f2f7}
+
+.appian-body
+.aui-DataGrid-Table td.row_delete:focus{background-color:#e7f2f7}
+
+.appian-body
+.aui-DataGrid-Table th.error,
+.appian-body
+.aui-DataGrid-Table th.sortable.error{background-color:#ffe6e6;color:red}
+
+.appian-body
+.aui-DataGrid-Table td.error{border:1px solid red}
+
+.appian-body
+.aui-DataGrid-Table td.grid_error,
+.appian-body
+.aui-DataGrid-Table tr.footer:hover td.grid_error{background-color:#ffe6e6;color:red}
+
+.appian-body
+.aui-DataGrid-Table td.edited{background:url("../../tempo/img/grid_edited_cell_corner.png") no-repeat scroll top right transparent}
+
+.appian-body
+.aui-DataGrid-Table .table_checked_item_menu a{background-color:#fff;border:1px solid #e9e9e9;color:#555}
+
+.appian-body
+.aui-DataGrid-Table .table_checked_item_pointer{background:url("../../tempo/img/grid_checkbox_pointer_arrow.png") no-repeat scroll center center transparent}
+
+.appian-body
+.aui-DataGrid-Table .table_checked_item_menu a:hover,
+.appian-body
+.aui-DataGrid-Table .table_checked_item_menu a:focus{border:1px solid #ee6615}
+
+.appian-body
+.aui-DataGrid-Table table thead tr th { cursor: pointer; }
+
+.appian-body
+.aui-DataGridPager-Container td{font-size:13px;line-height:13px;}
+
+.appian-body
+.aui-DataGridPager-Container td > *{vertical-align: middle;}
+
+.appian-body
+.aui-DataGrid-Table .empty tbody tr td{
+  text-align:center;
+  height:60px;
+}
+
+.appian-body
+.aui-DataGrid-Table .empty tbody tr:hover td{
+  background-color:transparent;
+}
+
+.appian-body
+.aui-DataGrid-Table table.flush {
+  border-width: 1px 0 1px 0;
+  border-radius: 0;
+}

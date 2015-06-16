@@ -1,0 +1,326 @@
+/*
+Lightbox v2.51
+by Lokesh Dhakar - http://www.lokeshdhakar.com
+
+For more information, visit:
+http://lokeshdhakar.com/projects/lightbox2/
+
+Licensed under the Creative Commons Attribution 2.5 License - http://creativecommons.org/licenses/by/2.5/
+- free for use in both personal and commercial projects
+- attribution requires leaving author name, author link, and the license info intact
+
+Thanks
+- Scott Upton(uptonic.com), Peter-Paul Koch(quirksmode.com), and Thomas Fuchs(mir.aculo.us) for ideas, libs, and snippets.
+- Artemy Tregubenko (arty.name) for cleanup and help in updating to latest proto-aculous in v2.05.
+
+There are minimal Appian-specific modifications in this file. All modifications are tagged as such
+*/
+
+
+@external
+#lightboxOverlay #lightbox .lb-image .lb-outerContainer .lb-container .lb-loader
+.lb-cancel .lb-nav .lb-container .lb-next .lb-prev .lb-dataContainer .lb-data
+.lb-details .lb-caption .lb-number .lb-close ;
+
+
+.appian-body
+#lightboxOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10001;
+  background-color: black;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=55);
+  opacity: 0.55;
+  display: none;
+}
+
+
+.appian-body
+#lightbox {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  z-index: 10002;
+  text-align: center;
+  line-height: 0;
+  font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
+  font-weight: normal;
+}
+
+
+.appian-body
+#lightbox img {
+  /* Appian modification (AN_50560): Fit to screen, remove autos */
+}
+
+
+.appian-body
+#lightbox a img {
+  border: none;
+}
+
+
+.appian-body
+.lb-outerContainer {
+  position: relative;
+  background-color: white;
+  *zoom: 1;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+}
+
+
+.appian-body
+.lb-outerContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.appian-body
+.lb-container {
+  padding: 10px;
+}
+
+
+.appian-body
+.lb-loader {
+  position: absolute;
+  top: 40%;
+  left: 0%;
+  height: 25%;
+  width: 100%;
+  text-align: center;
+  line-height: 0;
+}
+
+
+.appian-body
+.lb-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+}
+
+
+.appian-body
+.lb-container>.nav {
+  left: 0;
+}
+
+
+.appian-body
+.lb-nav a {
+  outline: none;
+}
+
+
+.appian-body
+.lb-prev,
+.appian-body
+.lb-next {
+  width: 49%;
+  height: 100%;
+  background-image:
+    url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
+  /* Appian modification (AN_50560): Trick IE into showing hover */
+  display: block;
+}
+
+
+.appian-body
+.lb-prev {
+  left: 0;
+  float: left;
+}
+
+
+.appian-body
+.lb-next {
+  right: 0;
+  float: right;
+}
+
+
+.appian-body
+.lb-prev:hover {
+  background: url(prev.png) left 48% no-repeat;
+}
+
+
+.appian-body
+.lb-next:hover {
+  background: url(next.png) right 48% no-repeat;
+}
+
+
+.appian-body
+.lb-dataContainer {
+  margin: 0 auto;
+  padding-top: 5px;
+  *zoom: 1;
+  width: 100%;
+  -moz-border-radius-bottomleft: 4px;
+  -webkit-border-bottom-left-radius: 4px;
+  -ms-border-bottom-left-radius: 4px;
+  -o-border-bottom-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+  -moz-border-radius-bottomright: 4px;
+  -webkit-border-bottom-right-radius: 4px;
+  -ms-border-bottom-right-radius: 4px;
+  -o-border-bottom-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+
+.appian-body
+.lb-dataContainer:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+.appian-body
+.lb-data {
+  padding: 0 10px;
+  color: #bbbbbb;
+}
+
+
+.appian-body
+.lb-data .lb-details {
+  width: 85%;
+  float: left;
+  text-align: left;
+  line-height: 1.1em;
+}
+
+
+.appian-body
+.lb-data .lb-caption {
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+
+/* Appian modification (AN_50560): keep whitespace in caption */
+.appian-body
+.lb-data .lb-caption pre {
+  color: #fff;
+  display: inline;
+  font-family: sans-serif;
+  font-size: 13px;
+  font-weight: bold;
+  line-height: 1em;
+  text-align: left;
+  /* Appian modification (AN_50560): Preserve wrapping in pre tag */
+  word-wrap: break-word;
+  white-space: -moz-pre-wrap;
+  white-space: pre-wrap;
+}
+
+
+.appian-body
+.lb-data .lb-number {
+  display: block;
+  clear: left;
+  padding-bottom: 1em;
+  font-size: 11px;
+}
+
+
+.appian-body
+.lb-data .lb-close {
+  width: 35px;
+  float: right;
+  padding-bottom: 0.7em;
+  outline: none;
+}
+
+
+.appian-body
+.lb-data .lb-close:hover {
+  cursor: pointer;
+}
+
+
+/* BEGIN APPIAN MODIFICATIONS */
+.appian-body
+.lb-data {
+  font-family: sans-serif;
+  position: relative;
+}
+
+
+.appian-body
+.lb-caption {
+  color: #fff;
+}
+
+
+.appian-body
+.lb-close {
+  float: none;
+  top: -25px;
+  right: -15px;
+  position: absolute;
+  z-index: 10002;
+}
+
+
+.appian-body
+.lb-close img {
+  width: 30px;
+  height: 30px;
+}
+
+
+.appian-body
+.lb-prev,
+.appian-body
+.lb-next {
+  cursor: pointer;
+}
+
+
+/* Appian modification (AN_50560): add download button */
+.appian-body
+.lb-data .lb-dl {
+  width: 35px;
+  float: none;
+  top: -25px;
+  right: 18px;
+  position: absolute;
+  z-index: 10002;
+  padding-bottom: 0.7em;
+  outline: none;
+}
+
+
+.appian-body
+.lb-data .lb-dl:hover {
+  cursor: pointer;
+}
+
+
+.appian-body
+.lb-dl img {
+  width: 30px;
+  height: 30px;
+}
+
+
+/* END APPIAN MODIFICATIONS */

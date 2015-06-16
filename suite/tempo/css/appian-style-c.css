@@ -1,0 +1,63 @@
+.appian-body .accessibilityhidden{position:absolute;left:-10000px;top:auto;width:1px;height:1px;overflow:hidden;}.appian-body .GGID2ICBLH{-moz-border-radius:0.3em;-webkit-border-radius:0.3em;border-radius:0.3em;}.appian-body .GGID2ICBHH{background-color:#a7dafe;font-weight:bold;border:1px solid #999;font-size:1.04em;padding:0.3em 1.6em;cursor:pointer;}.appian-body .GGID2ICBJH{background-color:#eee;border:1px solid #999;font-size:1.04em;padding:0.3em 1.6em;cursor:pointer;font-weight:bold;}.appian-body .GGID2ICBMH{background-color:#eee;border:1px solid #999;padding:0.3em 1.6em;font-size:1.04em;cursor:pointer;}.appian-body .GGID2ICBIH{background-color:#eee;font-weight:bold;border:1px solid #999;font-size:1.04em;padding:0.2em 0.9em;margin-right:0.7em;cursor:pointer;}.appian-body .GGID2ICBKH{background-color:#eee;border:1px solid #999;font-size:1.04em;padding:0.2em 0.9em;cursor:pointer;font-weight:bold;}.appian-body .GGID2ICBNH{color:#406f9c;cursor:pointer;font-weight:bold;}.appian-body .GGID2ICBFH{color:#999;background-color:#ccc;cursor:default;}.appian-body .gwtContent p{margin:0;padding:0;}.appian-body .gwtContent input[type="text"],.appian-body .gwtContent textarea,.appian-body .gwtContent button,.appian-body .gwtContent select,.appian-body .gwt-PopupPanel input[type="text"],.appian-body .gwt-PopupPanel textarea,.appian-body .gwt-PopupPanel button,.appian-body .gwt-PopupPanel select{-moz-border-radius:4px;-webkit-border-radius:4px;border-radius:4px;font-family:sans-serif;}.appian-body .gwtContent input[type="text"]:focus,.appian-body .gwtContent textarea:focus,.appian-body .gwtContent button:focus,.appian-body .gwtContent select:focus,.appian-body .gwt-PopupPanel input[type="text"]:focus,.appian-body .gwt-PopupPanel textarea:focus,.appian-body .gwt-PopupPanel button:focus,.appian-body .gwt-PopupPanelselect:focus{outline:none;}.appian-body .gwtContent input[type="text"],.appian-body .gwtContent textarea{border:1px solid #ccc;}.appian-body .gwtContent select{border:1px solid #ccc;font-size:0.94em;padding:2px;}.appian-body .gwt-PopupPanel input[type="text"],.appian-body .gwt-PopupPanel textarea,.appian-body .gwt-PopupPanel select{border:1px solid #ccc;}.appian-body .gwtContent input[type="text"]:focus,.appian-body .gwtContent textarea:focus,.appian-body .gwtContent select:focus,.appian-body .gwt-PopupPanel input[type="text"]:focus,.appian-body .gwt-PopupPanel textarea:focus,.appian-body .gwt-PopupPanelselect:focus{border:1px solid #7AABCF;}.appian-body .gwtContent input[type="radio"],.appian-body .gwtContent input[type="checkbox"],.appian-body .gwt-PopupPanel input[type="radio"],.appian-body .gwt-PopupPanel input[type="checkbox"]{border:0 !important;}.appian-body .gwtContent a:hover{color:#f93;}.appian-body .gwt-PopupPanel{-moz-border-radius:6px;-webkit-border-radius:6px;border-radius:6px;border:1px solid #aaa;box-shadow:2px 2px 6px #ccc;font-family:Sans-serif;}.appian-body .gwt-PopupPanel.info{background-color:#dbecfe;}.appian-body .gwt-PopupPanel.input{background-color:white;}.appian-body .gwt-PopupPanel.error{background-color:#fed6d6;}.appian-body .gwt-PopupPanelGlass{filter:alpha(opacity=30);-moz-opacity:0.3;opacity:0.3;background-color:#b3b3b3;}.appian-body .gwt-Tree .gwt-TreeItem-selected{background:transparent;}.appian-body .appian-inline-confirmation{background-color:#fefdca;}.appian-body .appian-informationPanel{background-color:#cfecff;}.appian-body .appian-informationBar{font-weight:bold;}.appian-body .overflow-y-scroll{overflow-y:scroll;}.appian-body .overflow-x-visible{overflow-x:visible;}.appian-body .overflow-x-hidden{overflow-x:hidden;}.appian-body .appian-submit-button{cursor:pointer;display:inline-block;font-size:13px;line-height:16px;padding:5px 12px;vertical-align:middle;border-radius:4px;font-family:Sans-Serif;min-width:80px;max-width:300px;text-overflow:ellipsis;overflow:hidden;text-align:center;background-color:#e6e6e6;background-repeat:no-repeat;background-image:-webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));background-image:-webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);background-image:-moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);background-image:-ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);background-image:-o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);background-image:linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);color:#444;border:1px solid #ccc;border-bottom-color:#bbb;-webkit-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);-moz-box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);box-shadow:inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);-webkit-transition:0.1s linear all;-moz-transition:0.1s linear all;-ms-transition:0.1s linear all;-o-transition:0.1s linear all;transition:0.1s linear all;}.appian-body .appian-submit-button:hover{background-position:0 -15px;color:#333;text-decoration:none;}.appian-body button::-moz-focus-inner,.appian-body input[type="submit"]::-moz-focus-inner{padding:0;border:0;}.appian-body input[type="button"],.appian-body input[type="reset"]{width:auto;height:auto;}.appian-body input[type="submit"]{width:auto;height:auto;cursor:pointer;-webkit-appearance:button;}.appian-body .appian-submit-button:focus{outline:1px dotted #666;}.appian-body .appian-submit-button:active{-webkit-box-shadow:inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);-moz-box-shadow:inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);box-shadow:inset 0 2px 4px rgba(0, 0, 0, 0.25), 0 1px 2px rgba(0, 0, 0, 0.05);}.appian-body .appian-first-submit-button{color:white;text-shadow:0 0 1px #244c0b;background-color:#3ba03b;background-repeat:repeat-x;background-image:-khtml-gradient(linear, left top, left bottom, from(#55B455), to(#3BA03B));background-image:-moz-linear-gradient(top, #55B455, #3BA03B);background-image:-ms-linear-gradient(top, #55B455, #3BA03B);background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #55B455), color-stop(100%, #3BA03B));background-image:-webkit-linear-gradient(top, #55B455, #3BA03B);background-image:-o-linear-gradient(top, #55B455, #3BA03B);background-image:linear-gradient(top, #55B455, #3BA03B);border-color:#3ba03b #3ba03b #3d773d;border-color:rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);}.appian-body .appian-first-submit-button:hover{color:#fff;}.appian-body .appian-submit-button[disabled],.appian-body .appian-first-submit-button[disabled],.appian-body .appian-submit-button.disabled,.appian-body .appian-first-submit-button.disabled{background-image:none;box-shadow:none;opacity:0.65;cursor:default;}.appian-body .GGID2ICBAH{display:block;color:#000;font-size:13px;line-height:16px;min-height:16px;word-wrap:break-word;margin:0;}.appian-body .aui-LabelPositionAdjacent .GGID2ICBAH,.appian-body .aui-LabelPositionCollapsed .GGID2ICBAH{padding:4px 0 0 0;}.appian-body .aui-LabelPositionAbove .GGID2ICBAH,.appian-body .aui-LabelPositionCollapsed .GGID2ICBAH{padding:0;}.appian-body .gwt-PopupPanelGlass,.appian-body .gwt-PopupPanel,.appian-body .gwt-MenuBarPopup,.appian-body .gwt-SuggestBoxPopup,.appian-body .dateBoxPopup,.appian-body .aui-TimeInput-Popup{z-index:10001;}body.appian-body{padding:0;margin:0;height:100%;font-size:100%;font-family:Sans-Serif;}.appian-body a{text-decoration:none;color:#285fab;}.appian-body a img{border:none;}.appian-body .hide{display:none;}.appian-body .strong{font-weight:bold;}.appian-body a:hover{color:#ee6615;}.appian-body input[type="text"],.appian-body input[type="password"],.appian-body textarea,.appian-body select,.appian-body .picker_input{border:1px solid #c7c7c7;border-radius:2px;color:black;}.appian-body input[type="text"]:disabled,.appian-body input[type="password"]:disabled,.appian-body textarea:disabled,.appian-body select:disabled,.appian-body select:disabled option{color:#7f7f7f;}.appian-body input[type="text"]:focus,.appian-body textarea:focus,.appian-body select:focus{border:1px solid #7aabcf;box-shadow:0 0 8px #67b9ff inset;outline:medium none;}.appian-body ::-moz-placeholder{color:#a9a9a9;opacity:1;}.appian-body input:-moz-placeholder,.appian-body textarea:-moz-placeholder{color:#a9a9a9;}.appian-body .appian-avatar{border:1px solid #333;}.appian-body .appian-feed-entry{border:1px solid #fff;color:black;}.appian-body .appian-feed-entry-author{font-weight:bold;font-size:14px;line-height:1.3;font-family:Sans-Serif;}.appian-body .appian-feed-entry-recipient{font-weight:normal;}.appian-body .appian-feed-entry-message{font-size:14px;line-height:1.3;font-family:Sans-Serif;}.appian-body .appian-feed-entry-target{font-size:14px;line-height:1.3;font-family:Sans-Serif;font-weight:bold;}.appian-body .appian-feed-entry-kudos_description{font-size:14px;line-height:1.3;}.appian-body .appian-feed-entry-metadata{font-family:Sans-Serif;font-size:12px;}.appian-body .appian-feed-entry-show-all-comments,.appian-body .appian-feed-entry-kudos_descriptio{font-family:Sans-Serif;}.appian-body .appian-feed-entry-click-through{cursor:pointer;}.appian-body .appian-feed-entry-comment,.appian-body .appian-feed-entry-post-comment{background-color:#f6f6f6;border:none;}.appian-body .appian-feed-entry-hazard{background-color:#fed6d6;border:none;}.appian-body .appian-feed-entry-simpleAction{background-color:#fffcca;}.appian-body .appian-feed-component-filter-mytasks .appian-feed-entry-task{background:none;}.appian-body .appian-tempo-filter-bar a,.appian-body .appian-tempo-filter-bar span,.appian-body .appian-tempo-post-confirmation a,.appian-body .appian-tempo-post-confirmation span{font-weight:normal;}.appian-body .appian-tempo-broadcast-tempo{font-style:italic;letter-spacing:-0.01em;font-size:1.6em;font-family:Arial, Helvetica, Sans-Serif;}.appian-body .appian-tempo-broadcast-textarea{font-size:1.1em;}.appian-body .appian-tempo-broadcast-post{background-color:#d3e9f9;}.appian-body .appian-feed-entry-data-view-stripes{background-color:#eee;}@page
+.appian-body{
+  margin: 0.4in;
+}
+
+@media print {
+  body.appian-body {
+    background-image: none;
+    background-color: #fff;
+  }
+
+  .appian-body
+  .main_nav_bar {
+    display: none;
+  }
+
+  .appian-body
+  .main_content {
+    margin: 0;
+    box-shadow: none;
+    border: none;
+  }
+
+  .appian-body
+  .filters {
+    display: none !important;
+  }
+
+  .appian-body
+  .content_main {
+    border-left: none;
+  }
+
+  .appian-body
+  .list_content {
+    max-width: none;
+  }
+
+  .appian-body
+  .button_box_shadow {
+    box-shadow: none;
+  }
+
+  .appian-body
+  .input_column,
+  .appian-body
+  .input_below {
+    overflow-x: hidden;
+  }
+
+  .appian-body
+  textarea.printable {
+    display: none;
+  }
+}
+
+@media screen {
+  .appian-body
+  div.textarea_print {
+    display: none;
+  }
+}
+.appian-body .appian-indicator-message{font-family:Sans-serif;}.appian-body .GGID2ICBNLB{background-color:#f8f3a7;background-repeat:repeat-x;border-radius:0 0 5px 5px;background-image:-khtml-gradient(linear, left top, left bottom, from(#fffac0), to(#faf493));background-image:-moz-linear-gradient(top, #fffac0, #faf493);background-image:-ms-linear-gradient(top, #fffac0, #faf493);background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%, #fffac0), color-stop(100%, #faf493));background-image:-webkit-linear-gradient(top, #fffac0, #faf493);background-image:-o-linear-gradient(top, #fffac0, #faf493);background-image:linear-gradient(top, #fffac0, #faf493);filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffac0', endColorstr='#faf493', GradientType=0);}.appian-body .GGID2ICBOLB{border-radius:0 0 3px 3px;}.appian-body .GGID2ICBNLB,.appian-body .GGID2ICBOLB{position:fixed;left:50%;padding:2px 15px 3px 15px;margin-left:-50px;top:-1px;font-size:14px;font-weight:bold;text-align:center;color:#404040;border:1px solid #333;border:1px solid rgba(0,0,0,0.2);z-index:10001;}.appian-body .GGID2ICBMLB{visibility:hidden;}
