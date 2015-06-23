@@ -1,4 +1,25 @@
-.appian-task-list * {
+.nl-table {
+  width: 80%;
+}
+
+.nl-table table {
+  border-collapse:collapse;
+}
+
+.nl-table * {
+  border-collapse:collapse;
+}
+
+.nl-table td, .nl-table tr, .nl-table th {
+  /*border-spacing: 0;*/
+}
+
+.nl-table th {
+  cursor: none;
+  /*border-spacing: 0;*/
+}
+
+/*.appian-task-list * {
   font-size: 13px;
   font-family: Sans-Serif;
   font-weight: normal;
@@ -36,4 +57,4 @@
   padding: 9px 8px 8px;
   text-align: left;
   word-wrap: break-word;
-}
+}*/

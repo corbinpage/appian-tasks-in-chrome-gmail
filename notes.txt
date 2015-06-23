@@ -32,3 +32,21 @@ tempo.nocache.js:10 Failed to download javascript dependency https://mail.google
     -Save in chrome local storage
     -https://productforums.google.com/forum/#!topic/chrome/fZOzbOjb4ac
   -Query tasks and display in popup or in gmail 
+
+
+
+
+___Embedded Interface Loader Error
+
+  tempo.nocache.js:39 Resource interpreted as Stylesheet but transferred with MIME type text/html: "https://mail.google.com/mail/u/0/".c @ tempo.nocache.js:39hb @ tempo.nocache.js:40tempo @ tempo.nocache.js:42(anonymous function) @ tempo.nocache.js:43
+gmailr.js:14 Initializing Gmailr API
+tempo.nocache.js:39 Resource interpreted as Stylesheet but transferred with MIME type text/html: "https://mail.google.com/mail/u/0/".c @ tempo.nocache.js:39hb @ tempo.nocache.js:40tempo @ tempo.nocache.js:42(anonymous function) @ tempo.nocache.js:43
+gmailr.js:14 Calling delayed loader...
+gmailr.js:14 Fully loaded
+(index):1 Refused to execute script from 'https://mail.google.com/mail/u/0/6E85B4C654208E4E65AE190B90B961D9.cache.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.
+tempo.nocache.js:39 Resource interpreted as Stylesheet but transferred with MIME type text/html: "https://mail.google.com/mail/u/0/".c @ tempo.nocache.js:39hb @ tempo.nocache.js:40tempo @ tempo.nocache.js:42(anonymous function) @ tempo.nocache.js:43
+gmailr.js:14 Delayed loader success, email: undefined
+(index):1 Refused to execute script from 'https://mail.google.com/mail/u/0/ui/ace/ace-bundle.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.
+tempo.nocache.js:10 Failed to download javascript dependency https://mail.google.com/mail/u/0/ui/ace/ace-bundle.js Event {}
+(index):1 Refused to execute script from 'https://mail.google.com/mail/u/0/ui/jquery-bundle.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.
+tempo.nocache.js:10 Failed to download javascript dependency https://mail.google.com/mail/u/0/ui/jquery-bundle.js Event {}
