@@ -1,3 +1,6 @@
+-Table border radius of 4px does not seem to be working
+
+
 -Need to Configure gmail as an embedded interface
 -
 

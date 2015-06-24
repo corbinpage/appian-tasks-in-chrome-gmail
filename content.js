@@ -19,65 +19,65 @@ InboxSDK.load(1, 'sdk_appian-tasks_8f26985331').then(function(sdk) {
 	});
 
 function createContainer(){
-	var parentContainerDiv  = document.createElement('div');
-	parentContainerDiv.className = 'GGID2ICBFB GGID2ICBKB';
+  var parentContainerDiv  = document.createElement('div');
+  parentContainerDiv.className = 'nl-gmail-tasklist-container';
 
-	var taskListTitle = 'My Current Tasks';
-	var taskListInstructions = 'View your current tasks and select one to open it in a new tab.';
-	var taskListTitleHtml = '<div class="GGID2ICBNCC"><h2 class="appian-form-title GGID2ICBCDC" style="display: block;">'+taskListTitle+'</h2> <p class="GGID2ICBOCC">'+taskListInstructions+'</p></div>'
-	parentContainerDiv.innerHTML = taskListTitleHtml;
+  var taskListTitle = 'My Current Tasks';
+  var taskListInstructions = 'View your current tasks and select one to open it in a new tab.';
+  var taskListTitleHtml = '<div><h2 class="appian-form-title">'+taskListTitle+'</h2> <p class="appian-form-instructions">'+taskListInstructions+'</p></div>'
+  parentContainerDiv.innerHTML = taskListTitleHtml;
 
-	var tableContainerDiv  = document.createElement('div');
-	tableContainerDiv.className = 'aui-DataGrid-Table nl-table GGID2ICBNKC';
+  var tableContainerDiv  = document.createElement('div');
+  tableContainerDiv.className = 'nl-gmail-tasklist-table-container';
 
-	var taskList = jsonData
-	var tbl = createTaskListTable(taskList);
+  var taskList = jsonData
+  var tbl = createTaskListTable(taskList);
 
-	tableContainerDiv.appendChild(tbl);
-	parentContainerDiv.appendChild(tableContainerDiv);
+  tableContainerDiv.appendChild(tbl);
+  parentContainerDiv.appendChild(tableContainerDiv);
 
-	return parentContainerDiv;
+  return parentContainerDiv;
 }
 
 function createTableHeader(){
-	var thead  = document.createElement('thead');
-	var tr  = document.createElement('tr');
+  var thead  = document.createElement('thead');
+  var tr  = document.createElement('tr');
 
-	headerText = ["Name", "Received", "Assignee", "Process", "Status", "ID"];
+  headerText = ["Name", "Received", "Assignee", "Process", "Status", "ID"];
 
-	for(var i = 0; i < headerText.length; i++){
-		var th  = document.createElement('th');
-		th.innerText = headerText[i];
-		tr.appendChild(th);
-	}
+  for(var i = 0; i < headerText.length; i++){
+    var th  = document.createElement('th');
+    th.innerText = headerText[i];
+    tr.appendChild(th);
+  }
 
-	thead.appendChild(tr);
-	return thead;
+  thead.appendChild(tr);
+  return thead;
 }
 
 function createTaskListTable(taskList){
-	var tbl  = document.createElement('table');
-	tbl.appendChild(createTableHeader());
-	var tbody  = document.createElement('tbody');
+  var tbl  = document.createElement('table');
+  tbl.appendChild(createTableHeader());
+  var tbody  = document.createElement('tbody');
 
-	for(var i = 0; i < taskList.data.length; i++){
-		var tr = tbody.insertRow();
-		for(var j = 0; j < taskList.columnConfigs.length; j++){
-			var td = tr.insertCell();
-			if(j===0) {
-				var link = document.createElement('a');
-				link.href = '#';
-				link.setAttribute('target', '_blank');
-				link.appendChild(document.createTextNode(taskList.data[i]["c"+j.toString()]));
-				td.appendChild(link);
-			} else {
-				td.appendChild(document.createTextNode(taskList.data[i]['c'+j.toString()]));
-			}
-		}
-	}
-	tbl.appendChild(tbody);
+  for(var i = 0; i < taskList.data.length; i++){
+    var tr = tbody.insertRow();
+    for(var j = 0; j < taskList.columnConfigs.length; j++){
+      var td = tr.insertCell();
+      if(j===0) {
+        var link = document.createElement('a');
+        link.href = '#';
+        link.setAttribute('target', '_blank');
+        link.appendChild(document.createTextNode(taskList.data[i]["c"+j.toString()]));
+        td.appendChild(link);
+      } else {
+        td.appendChild(document.createTextNode(taskList.data[i]['c'+j.toString()]));
+      }
+    }
+  }
+  tbl.appendChild(tbody);
 
-	return tbl;
+  return tbl;
 }
 
 sdk.NavMenu.addNavItem({

@@ -18,14 +18,15 @@
               "content.js",
               // "tempo.nocache.js",
               "taskDataJson.json"],
-      "css":[ "suite/tempo/css/table.css",
-              "suite/tempo/ui/font-awesome/css/font-awesome.min.css",
-              "suite/tempo/ui/lightbox/lightbox.css",
-              "suite/tempo/css/appian-style-a.css",
-              "suite/tempo/css/appian-style-b.css",
-              "suite/tempo/css/appian-style-c.css",
-              "suite/tempo/css/appian-style-d.css",
-              "suite/tempo/css/appian-style-e.css",
+      "css":[ 
+              // "suite/tempo/css/table.css",
+              // "suite/tempo/ui/font-awesome/css/font-awesome.min.css",
+              // "suite/tempo/ui/lightbox/lightbox.css",
+              // "suite/tempo/css/appian-style-a.css",
+              // "suite/tempo/css/appian-style-b.css",
+              // "suite/tempo/css/appian-style-c.css",
+              // "suite/tempo/css/appian-style-d.css",
+              // "suite/tempo/css/appian-style-e.css",
               "style.css"],
       "run_at": "document_end"
     }
