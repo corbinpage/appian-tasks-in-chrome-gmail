@@ -35,7 +35,28 @@
     "https://mail.google.com/",
     "https://inbox.google.com/",
     "activeTab",
-    "https://api.myjson.com/"
+    "https://api.myjson.com/",
+    "http://localhost:3000/",
+    "storage"
   ],
+  "web_accessible_resources": [
+    "task.html"
+  ],
+  "sandbox": {
+    "pages": [
+      "task.html"
+    ]
+  },
+  "webview": {
+          "partitions": [
+            // In this example, any <webview partition="static"> or
+            // <webview partition="persist:static"> will have access to
+            // header.html, footer.html, and static.png.
+            {
+              "name": "static",
+              "accessible_resources": ["task.html"]
+            }
+          ]
+  },
   "manifest_version": 2
 }

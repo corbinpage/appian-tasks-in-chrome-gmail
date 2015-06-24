@@ -94,7 +94,10 @@ function createTaskListTable(taskData){
 
     $.each(cols, function(j, col){
       if(j==0) {
-        $tr.append($("<td>").append($("<a>").attr("href","#").text(row[col])));  
+        $tr.append($("<td>").append($("<a>")
+                   .attr("href","#")
+                   .attr("target","_blank")
+                   .text(row[col])));  
       } else {
         $tr.append($("<td>").text(row[col]));        
       }

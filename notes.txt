@@ -5,8 +5,11 @@
 -
 http://myjson.com/3ex3g
 
-
-
+Troubles:
+-Can't directly embed
+  index):1 Refused to execute script from 'https://mail.google.com/mail/u/0/6E85B4C654208E4E65AE190B90B961D9.cache.js' because its MIME type ('text/html') is not executable, and strict MIME type checking is enabled.
+-Appian doesn't support running in an iframe
+-webview only available in Chrome Apps, not extensions
 
 "https://connect.facebook.net/en_US/all.js" -> works
 "https://appswest.princetonblue.net:8443/suite/tempo/tempo.nocache.js"
