@@ -1,4 +1,4 @@
-.nl-gmail-tasklist-container {
+.nl-gtaskList-container {
   font-family: sans-serif;
   font-size: 10px;
   padding: 18px 20px;
@@ -9,7 +9,7 @@
   overflow: visible;
 }
 
-.nl-gmail-tasklist-container .appian-form-title {
+.nl-gtaskList-container .appian-form-title {
   /* Font & Text */
   font-family: Montserrat, 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: 28px;
@@ -23,7 +23,7 @@
   display: block;
 }
 
-.nl-gmail-tasklist-container .appian-form-instructions {
+.nl-gtaskList-container .appian-form-instructions {
   font-family: sans-serif;
   color: #555;
   font-size: 13px;
@@ -33,7 +33,7 @@
   padding: 0px;
 }
 
-.nl-gmail-tasklist-table-container {
+.nl-gtaskList-table-container {
   font-family: sans-serif;
   font-size: 10px;
   margin: 0px 0px 8px;
@@ -42,7 +42,7 @@
   display: table;
 }
 
-.nl-gmail-tasklist-table-container table {
+.nl-gtaskList-table-container table {
   width: 100%;
   background-color: white;
   padding: 0;
@@ -63,7 +63,7 @@
   cursor: auto;
 }
 
-.nl-gmail-tasklist-table-container th {
+.nl-gtaskList-table-container th {
   font-family: sans-serif;
   font-size: 13px;
   font-weight: bold;
@@ -86,7 +86,7 @@
   overflow: visible;
 }
 
-.nl-gmail-tasklist-table-container td {
+.nl-gtaskList-table-container td {
   font-family: sans-serif;
   font-size: 13px;
   line-height: 13px;
@@ -105,19 +105,19 @@
   overflow: visible;
 }
 
-.nl-gmail-tasklist-table-container tr:nth-child(odd) td {
+.nl-gtaskList-table-container tr:nth-child(odd) td {
   background-color: #f7f7f7;
 }
 
-.nl-gmail-tasklist-table-container tr:hover td {
+.nl-gtaskList-table-container tr:hover td {
   background-color: #e7f2f7;
 }
 
-.nl-gmail-tasklist-table-container td a {
+.nl-gtaskList-table-container td a {
   text-decoration: none;
   color: #285fab;
 }
 
-.nl-gmail-tasklist-table-container td a:hover {
+.nl-gtaskList-table-container td a:hover {
   color: #ee6615;
 }

@@ -34,7 +34,8 @@
   "permissions": [
     "https://mail.google.com/",
     "https://inbox.google.com/",
-    "activeTab"
+    "activeTab",
+    "https://api.myjson.com/"
   ],
   "manifest_version": 2
 }
