@@ -1,3 +1,11 @@
+.nl-gtaskList-parent-container {
+  width: 100%;
+}
+
+.nl-gtaskList-parent-container #view-permission-label {
+  width: 100%;
+}
+
 .nl-gtaskList-container {
   font-family: sans-serif;
   font-size: 10px;

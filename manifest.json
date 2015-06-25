@@ -18,7 +18,7 @@
               "jquery-1.11.1.min.js",
               "content.js",
               "example.js",
-              "taskDataJson.json"],
+              "lib/jquery-editable/js/jquery-editable-poshytip.js"],
       "css":[ 
               // "suite/tempo/css/table.css",
               // "suite/tempo/ui/font-awesome/css/font-awesome.min.css",
@@ -28,6 +28,7 @@
               // "suite/tempo/css/appian-style-c.css",
               // "suite/tempo/css/appian-style-d.css",
               // "suite/tempo/css/appian-style-e.css",
+              "lib/jquery-editable/css/jquery-editable.css",
               "style.css"],
       "run_at": "document_end"
     }
@@ -38,9 +39,9 @@
     "https://mail.google.com/",
     "https://api.myjson.com/"
   ],
-  // "optional_permissions": [
-  //   "https://*/",
-  //   "http://*/"
-  // ],
+  "optional_permissions": [
+    "https://*/",
+    "http://*/"
+  ],
   "manifest_version": 2
 }

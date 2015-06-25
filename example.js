@@ -3,7 +3,7 @@ $(function() {
   loadPermissions();
 });
 
-var appianUrl = "";
+var appianUrl = "Empty";
 var needAppianUrl = true;
 
 // ---------------------------------------------------------------------------------------------------
@@ -44,6 +44,16 @@ function populateInputPermissionUI($parentDiv) {
           .append($("<input>").attr("id","input-permission-button")
                   .attr("type","button")
                   .attr("value","Submit")))
+          // .append($("<a>", {
+          //   href: "#",
+          //   id: "input-appian-url",
+          //   "data-type": "text",
+          //   "data-pk": "1",
+          //   "data-placeholder": "Required",
+          //   "data-title": "Enter Appian URL (http..suite/)",
+          //   class: "editable editable-click editable-empty"
+          // }).val(appianUrl)))
+
 
   $(function() {
     $('#input-permission-button').click(function() {
