@@ -1,11 +1,10 @@
 
 $(function() {
   loadPermissions();
-  initializeRoute($("body"));
 });
 
 var appianUrl = "";
-var needPermissionsBool = true;
+var needAppianUrl = true;
 
 // ---------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------
@@ -13,48 +12,53 @@ var needPermissionsBool = true;
 // ---------------------------------------------------------------------------------------------------
 
 function loadPermissions() {
-  chrome.storage.local.get('appianUrl', function(result){
-    appianUrl = result;
-    if($.isEmptyObject(appianUrl)) {
-      needPermissionsBool = true;
+  chrome.storage.local.get("appianUrl", function(result){
+    if($.isEmptyObject(result)) {
+      needAppianUrl = true;
+      initializeRoute($("body"));
     } else {
-      needPermissionsBool = false;
+      appianUrl = result["appianUrl"];
+      needAppianUrl = false;
+      initializeRoute($("body"));
     }
   });  
 }
 
 function initializeRoute($parentDiv) {
-  if(needPermissionsBool) {
+  populateParentContainer($parentDiv);
+  if(needAppianUrl) {
     populateInputPermissionUI($parentDiv);
   } else {
-    populateTaskListUI($parentDiv);
+    populateTaskListUI();
   }
 }
 
 function populateInputPermissionUI($parentDiv) {
-  $parentDiv.append($("<div>", {id:    "nl-gtaskList-container",
-                    class: "nl-gtaskList-container"}));
+  populateContainer();
   $("#nl-gtaskList-container")
-  .append($("<form>").
+  .append($("<form>")
           .append($("<input>")
                   .attr("id","input-permission-text")
-                  .attr("type","text"))
+                  .attr("type","text")
+                  .attr("value",appianUrl))
           .append($("<input>").attr("id","input-permission-button")
                   .attr("type","button")
                   .attr("value","Submit")))
 
   $(function() {
     $('#input-permission-button').click(function() {
-        appianUrl = $('#input-permission-text').val();
-      });
+      var input = $('#input-permission-text').val();
+      chrome.storage.local.set({"appianUrl": input})
+      appianUrl = input;
+      initializeRoute($parentDiv);
+    });
   });
 }
 
-function populateTaskListUI($parentDiv){
-  $parentDiv.append($("<div>", {id:    "nl-gtaskList-container",
-                    class: "nl-gtaskList-container"}));
-
-  var url = "https://api.myjson.com/bins/3ex3g";
+function populateTaskListUI(){
+  populateContainer();
+  // var url = "https://api.myjson.com/bins/3ex3g";
+  var url = appianUrl;
   // var headers;
 
   $.getJSON(url)
@@ -65,7 +69,7 @@ function populateTaskListUI($parentDiv){
     console.log(xhr);
     console.log(textStatus);
     console.log(errorThrown);
-    populateContainerHeader(textStatus, errorThrown);
+    populateContainerHeader(textStatus, xhr["status"]+" "+xhr["responseText"]+": "+errorThrown);
   })
   // .always(function() {
   //   
@@ -95,6 +99,32 @@ function populateSuccess(data) {
 // function populateError(data) {
 //   populateContainerHeader("Error Occurred", data.errorMessage);
 // }
+
+function populateParentContainer($parentDiv) {
+  $parentDiv.empty();
+  $parentDiv.append($("<div>", {id: "nl-gtaskList-parent-container",
+                    class: "nl-gtaskList-parent-container"}));
+
+  $("#nl-gtaskList-parent-container").append($("<input>", {
+    id: "view-permission-button",
+    type: "button",
+    value: "Settings"})
+  );
+
+  $(function() {
+    $("#view-permission-button").click(function() {
+      $('#nl-gtaskList-container').empty();
+      populateInputPermissionUI($parentDiv);
+    });
+  });
+}
+
+function populateContainer() {
+  $("#nl-gtaskList-parent-container").append($("<div>", {
+    id:    "nl-gtaskList-container",
+    class: "nl-gtaskList-container"})
+  );
+}
 
 function populateContainerHeader(title, instructions) {
   $("#nl-gtaskList-container").append($("<div>")
