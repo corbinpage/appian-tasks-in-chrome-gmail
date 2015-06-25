@@ -1,18 +1,54 @@
 
 $(function() {
-  // $('body').toggleClass('appian-body');
-// $('.inboxsdk__custom_view_element').toggleClass('appian-body');
-// contentDiv.innerHTML = taskHtml;
-
-// var contentDiv = document.getElementsByTagName('body')[0];
-populateTaskListUI($("body"));
-
+  loadPermissions();
+  initializeRoute($("body"));
 });
 
+var appianUrl = "";
+var needPermissionsBool = true;
+
 // ---------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------
+
+function loadPermissions() {
+  chrome.storage.local.get('appianUrl', function(result){
+    appianUrl = result;
+    if($.isEmptyObject(appianUrl)) {
+      needPermissionsBool = true;
+    } else {
+      needPermissionsBool = false;
+    }
+  });  
+}
+
+function initializeRoute($parentDiv) {
+  if(needPermissionsBool) {
+    populateInputPermissionUI($parentDiv);
+  } else {
+    populateTaskListUI($parentDiv);
+  }
+}
+
+function populateInputPermissionUI($parentDiv) {
+  $parentDiv.append($("<div>", {id:    "nl-gtaskList-container",
+                    class: "nl-gtaskList-container"}));
+  $("#nl-gtaskList-container")
+  .append($("<form>").
+          .append($("<input>")
+                  .attr("id","input-permission-text")
+                  .attr("type","text"))
+          .append($("<input>").attr("id","input-permission-button")
+                  .attr("type","button")
+                  .attr("value","Submit")))
+
+  $(function() {
+    $('#input-permission-button').click(function() {
+        appianUrl = $('#input-permission-text').val();
+      });
+  });
+}
 
 function populateTaskListUI($parentDiv){
   $parentDiv.append($("<div>", {id:    "nl-gtaskList-container",
@@ -29,7 +65,7 @@ function populateTaskListUI($parentDiv){
     console.log(xhr);
     console.log(textStatus);
     console.log(errorThrown);
-    populateError({errorMessage: textStatus+": "+errorThrown.toString()});
+    populateContainerHeader(textStatus, errorThrown);
   })
   // .always(function() {
   //   
@@ -43,31 +79,31 @@ function populateSuccess(data) {
   populateContainerHeader(taskListTitle, taskListInstructions);
 
   $("#nl-gtaskList-container").append($("<div>")
-                                           .addClass("nl-gtaskList-table-container")
-                                           .attr("id","nl-gtaskList-table-container"));
+                                      .addClass("nl-gtaskList-table-container")
+                                      .attr("id","nl-gtaskList-table-container"));
 
   if(data.totalCount <= 0) {
     $("#nl-gtaskList-table-container").append($("<p>")
-                                                   .append($("<em>")
-                                                           .text("No tasks available in your Task list.   :-(")));
+                                              .append($("<em>")
+                                                      .text("No tasks available in your Task list.   :-(")));
   } else {
     createTaskListTable(data);
   }
 
 }
 
-function populateError(data) {
-  populateContainerHeader("Error Occurred", data.errorMessage);
-}
+// function populateError(data) {
+//   populateContainerHeader("Error Occurred", data.errorMessage);
+// }
 
 function populateContainerHeader(title, instructions) {
   $("#nl-gtaskList-container").append($("<div>")
-                                           .append($("<h2>")
-                                                   .addClass("appian-form-title")
-                                                   .text(title))
-                                           .append($("<p>")
-                                                   .addClass("appian-form-instructions")
-                                                   .text(instructions)));
+                                      .append($("<h2>")
+                                              .addClass("appian-form-title")
+                                              .text(title))
+                                      .append($("<p>")
+                                              .addClass("appian-form-instructions")
+                                              .text(instructions)));
 }
 
 function createTableHeader(){

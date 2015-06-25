@@ -11,12 +11,13 @@
     {
       "matches": [
         "https://mail.google.com/*",
-        "https://inbox.google.com/*"
+        "https://inbox.google.com/*",
+        "file:///*"
       ],
       "js": [ "inboxsdk.js",
               "jquery-1.11.1.min.js",
               "content.js",
-              // "tempo.nocache.js",
+              "example.js",
               "taskDataJson.json"],
       "css":[ 
               // "suite/tempo/css/table.css",
@@ -32,10 +33,14 @@
     }
   ],
   "permissions": [
-    "https://mail.google.com/",
-    "https://inbox.google.com/",
     "activeTab",
+    "storage",  
+    "https://mail.google.com/",
     "https://api.myjson.com/"
   ],
+  // "optional_permissions": [
+  //   "https://*/",
+  //   "http://*/"
+  // ],
   "manifest_version": 2
 }
