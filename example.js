@@ -29,21 +29,18 @@ function loadPermissions() {
 
 function initializeRoute() {
   if (true) {
+    renderErrorUI();
     // populateInputPermissionUI()
-    renderNeedAuthUI();
+    // renderNeedAuthUI();
   }
   else if(needAppianUrl) {
-    populateInputPermissionUI($("#nl-gtaskList-parent-container"));
+    renderInputAppianUrlUI();
   } else {
-    populateTaskListUI();
+    queryAppianForTaskList();
   }
 }
 
-
-
-
-function populateTaskListUI(){
-  populateContainer();
+function queryAppianForTaskList(){
   // var url = "https://api.myjson.com/bins/3ex3g";
   var url = appianUrl;
   // var headers;
@@ -56,17 +53,15 @@ function populateTaskListUI(){
     console.log(xhr);
     console.log(textStatus);
     console.log(errorThrown);
+    populateContainer();
     populateContainerHeader(textStatus, xhr["status"]+" "+xhr["responseText"]+": "+errorThrown);
   })
-  // .always(function() {
-  //   
-  // });
-
 }
 
 function populateSuccess(data) {
   var taskListTitle = "My Current Tasks";
   var taskListInstructions = "View your current tasks and select one to open it in a new tab.";
+  populateContainer();
   populateContainerHeader(taskListTitle, taskListInstructions);
 
   $("#nl-gtaskList-container").append($("<div>")
@@ -74,18 +69,15 @@ function populateSuccess(data) {
                                       .attr("id","nl-gtaskList-table-container"));
 
   if(data.totalCount <= 0) {
-    $("#nl-gtaskList-table-container").append($("<p>")
-                                              .append($("<em>")
-                                                      .text("No tasks available in your Task list.   :-(")));
+    $("#nl-gtaskList-table-container")
+    .append($("<p>")
+            .append($("<em>")
+                    .text("No tasks available in your Task list.   :-(")));
   } else {
     createTaskListTable(data);
   }
 
 }
-
-// function populateError(data) {
-//   populateContainerHeader("Error Occurred", data.errorMessage);
-// }
 
 function populateParentContainer($parentDiv) {
   $parentDiv.empty();
@@ -164,7 +156,12 @@ function renderNeedAuthUI() {
   $("#nl-gtaskList-container").load("views/needAuth.html")
 }
 
-function populateInputPermissionUI() {
+function renderErrorUI() {
+  populateContainer();
+  $("#nl-gtaskList-container").load("views/errorUI.html")
+}
+
+function renderInputAppianUrlUI() {
   populateContainer();
   $("#nl-gtaskList-container").load("views/inputAppianUrl.html", function() {
     $('#input-appian-url-text').val(appianUrl);
