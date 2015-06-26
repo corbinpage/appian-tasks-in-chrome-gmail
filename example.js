@@ -13,57 +13,34 @@ var needAppianUrl = true;
 
 function loadPermissions() {
   chrome.storage.local.get("appianUrl", function(result){
+
     if($.isEmptyObject(result)) {
       needAppianUrl = true;
-      initializeRoute($("body"));
+      populateParentContainer($("body"));
+      initializeRoute();
     } else {
       appianUrl = result["appianUrl"];
       needAppianUrl = false;
-      initializeRoute($("body"));
+      populateParentContainer($("body"));
+      initializeRoute();
     }
   });  
 }
 
-function initializeRoute($parentDiv) {
-  populateParentContainer($parentDiv);
-  if(needAppianUrl) {
-    populateInputPermissionUI($parentDiv);
+function initializeRoute() {
+  if (true) {
+    // populateInputPermissionUI()
+    renderNeedAuthUI();
+  }
+  else if(needAppianUrl) {
+    populateInputPermissionUI($("#nl-gtaskList-parent-container"));
   } else {
     populateTaskListUI();
   }
 }
 
-function populateInputPermissionUI($parentDiv) {
-  populateContainer();
-  $("#nl-gtaskList-container")
-  .append($("<form>")
-          .append($("<input>")
-                  .attr("id","input-permission-text")
-                  .attr("type","text")
-                  .attr("value",appianUrl))
-          .append($("<input>").attr("id","input-permission-button")
-                  .attr("type","button")
-                  .attr("value","Submit")))
-          // .append($("<a>", {
-          //   href: "#",
-          //   id: "input-appian-url",
-          //   "data-type": "text",
-          //   "data-pk": "1",
-          //   "data-placeholder": "Required",
-          //   "data-title": "Enter Appian URL (http..suite/)",
-          //   class: "editable editable-click editable-empty"
-          // }).val(appianUrl)))
 
 
-  $(function() {
-    $('#input-permission-button').click(function() {
-      var input = $('#input-permission-text').val();
-      chrome.storage.local.set({"appianUrl": input})
-      appianUrl = input;
-      initializeRoute($parentDiv);
-    });
-  });
-}
 
 function populateTaskListUI(){
   populateContainer();
@@ -130,6 +107,7 @@ function populateParentContainer($parentDiv) {
 }
 
 function populateContainer() {
+  $("#nl-gtaskList-parent-container").empty();
   $("#nl-gtaskList-parent-container").append($("<div>", {
     id:    "nl-gtaskList-container",
     class: "nl-gtaskList-container"})
@@ -177,4 +155,36 @@ function createTaskListTable(taskData){
 
   var $tbl  = $('<table>').prepend(createTableHeader()).append($tbody);
   $("#nl-gtaskList-table-container").append($tbl);
+}
+
+/-------------------- Center focus UIs --------------------/ 
+
+function renderNeedAuthUI() {
+  populateContainer();
+  $("#nl-gtaskList-container").load("views/needAuth.html")
+}
+
+function populateInputPermissionUI() {
+  populateContainer();
+  $("#nl-gtaskList-container").load("views/inputAppianUrl.html", function() {
+    $('#input-appian-url-text').val(appianUrl);
+
+    $('#input-appian-url-button').click(function() {
+      console.log("here");
+      chrome.permissions.request({
+      // permissions: ["activeTab"],
+      origins: [$("#input-permission-text").val()]
+    }, function(granted) {
+      if (granted) {
+        initializeRoute($parentDiv);
+      } else {
+        initializeRoute($parentDiv);
+      }
+    });
+      var input = $('#input-permission-text').val();
+      chrome.storage.local.set({"appianUrl": input})
+      appianUrl = input;
+    });
+
+  });
 }

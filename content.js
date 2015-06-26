@@ -27,8 +27,7 @@ InboxSDK.load(1, 'sdk_appian-tasks_8f26985331').then(function(sdk) {
 function load() {
   chrome.storage.local.get('appianUrl', function(result){
     appianUrl = result;
-    alert("Appian URL Found: "+appianUrl);
-    alert("Appian URL Empty?: "+appianUrl.length === 0);
+
   });  
 }
 

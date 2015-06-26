@@ -11,14 +11,16 @@
     {
       "matches": [
         "https://mail.google.com/*",
-        "https://inbox.google.com/*",
+        // "https://inbox.google.com/*",
         "file:///*"
       ],
-      "js": [ "inboxsdk.js",
+      "js": [ 
+              // "inboxsdk.js",
               "jquery-1.11.1.min.js",
-              "content.js",
-              "example.js",
-              "lib/jquery-editable/js/jquery-editable-poshytip.js"],
+              // "content.js",
+              "example.js"
+              // "lib/jquery-editable/js/jquery-editable-poshytip.js"
+              ],
       "css":[ 
               // "suite/tempo/css/table.css",
               // "suite/tempo/ui/font-awesome/css/font-awesome.min.css",
@@ -35,7 +37,7 @@
   ],
   "permissions": [
     "activeTab",
-    "storage",  
+    "storage",
     "https://mail.google.com/",
     "https://api.myjson.com/"
   ],

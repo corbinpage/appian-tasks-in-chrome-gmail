@@ -1,4 +1,12 @@
-<a href="#" id="firstname" data-type="text" data-pk="1" data-placement="right" data-placeholder="Required" data-title="Enter your firstname" class="editable editable-click editable-empty" style="display: inline;">Empty</a>
+          // .append($("<a>", {
+          //   href: "#",
+          //   id: "input-appian-url",
+          //   "data-type": "text",
+          //   "data-pk": "1",
+          //   "data-placeholder": "Required",
+          //   "data-title": "Enter Appian URL (http..suite/)",
+          //   class: "editable editable-click editable-empty"
+          // }).val(appianUrl)))
 
 ___Issues
 -Table border radius of 4px does not seem to be working
