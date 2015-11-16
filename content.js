@@ -17,12 +17,10 @@ InboxSDK.load(1, 'sdk_appian-tasks_8f26985331').then(function(sdk) {
     routeParams: {state: 'Testing'}
   });
 
-// ---------------------------------------------------------------------------------------------------
-// ---------------------------------------------------------------------------------------------------
-// ---------------------------------------------------------------------------------------------------
-// ---------------------------------------------------------------------------------------------------
-
-
+		var contentDiv = customRouteView.getElement();
+		$('body').toggleClass('appian-body');
+		$('.inboxsdk__custom_view_element').toggleClass('appian-body');
+		contentDiv.innerHTML = taskHtml;
 
 function load() {
   chrome.storage.local.get('appianUrl', function(result){

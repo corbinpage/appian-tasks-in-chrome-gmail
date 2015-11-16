@@ -1,0 +1,67 @@
+<!doctype html>
+<html>
+<head>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="node_modules/mustache/mustache.min.js"></script>
+  <script src="popup.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="node_modules/bootstrap/dist/css/bootstrap-theme.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+
+    <section id="waiting" class="container hidden">
+      <p>Waiting</p>
+    </section>
+
+    <section id="no-perm" class="container hidden">
+      <div id="center-focus-outer-container">
+        <div id="center-focus-inner-container">
+          <h2 class="center-focus-title" >Enter your Appian URL</h2>
+          <p class="appian-form-instructions">Please enter your Appian URL. The link should begin with "http" or "https" and end with "suite/", for example "https://forum.appian.com/suite/".</p>
+          <div id="input-appian-button-container">
+            <form>
+              <input id="input-appian-url-text" class="center" type="text" placeholder="Appian URL">
+              <input id="input-appian-url-button" class="center" type="button" value="Submit">
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="not-auth" class="container hidden">
+      <div id="center-focus-outer-container">
+        <div id="center-focus-inner-container">
+          <h2 class="center-focus-title" >Sign in to Appian</h2>
+          <p class="appian-form-instructions">Use the link below to log into your Appian environment in a separate tab and then click Refresh to view your task list in Gmail.</p>
+          <div id="need-auth-button-container">
+            <a href="#" target="_blank" id="need-auth-link" class="center">Go to Appian</a>
+            <input id="need-auth-button-refresh" class="center" type="button" value="Refresh">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="general-error" class="container hidden">
+      <div id="center-focus-outer-container">
+        <div id="center-focus-inner-container">
+          <h2 class="center-focus-title" >Uh oh, something isn't right   :-(</h2>
+          <p class="appian-form-instructions">
+            Double check that you setup the Chrome Extension correctly, make sure you're using the correct Appian URL, and check that your Appian environment is online.
+          </p>
+          <p class="appian-form-instructions">
+            If you're still having trouble, please open an issue in the <a href="https://github.com/corbinpage/appian-tasks-in-chrome-gmail/issues" target="_blank">Github Repo</a>or feel free to reach out to <a href="https://twitter.com/corbpage" target="_blank">@corbpage</a>on Twitter.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="task-list-container">
+    </section>
+
+  </div>
+</body>
+</html>

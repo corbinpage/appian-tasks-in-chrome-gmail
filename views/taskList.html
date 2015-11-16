@@ -1,0 +1,30 @@
+<div class="row">
+<div class="col-xs-12">
+		<h1 class="appian-form-title">{{title}}</h1>
+		<p class="appian-form-instructions">{{instructions}}</p>
+		<div id="nl-gtaskList-container" class="nl-gtaskList-container">
+			<div id="nl-gtaskList-table-container" class="nl-gtaskList-table-container">
+				<table>
+					<thead>
+						<tr>
+							{{#data.columnLabels}}
+							<th>{{.}}</th>
+							{{/data.columnLabels}}
+						</tr>
+					</thead>
+					<tbody>
+						{{#data.data}}
+						<tr>
+							<td><a href="#{{c9}}" target="_blank">{{c10}}</a></td>
+							<td>{{c15}}</td>
+							<td>{{c7}}</td>
+							<td>{{c14}}</td>
+							<td>{{c22}}</td>
+						</tr>
+						{{/data.data}}
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
