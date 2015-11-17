@@ -4,50 +4,68 @@ $(function() {
   var WEB_API_ROUTE = "/webapi/usertasklist?username=cpage";
   var TASK_LIST_ROUTE = "/tempo/tasks/task/";
   var USERNAME = "corbin@nav-labs.com";
+  var ERROR_CODE_NOT_AUTH = "APNX-1-4187-000";
+
+  var $targetContainer = $("#task-list-container");
 
   function run() {
-    var url = "https://api.myjson.com/bins/476fx";
+    // var url = "https://api.myjson.com/bins/476fx"; // 3 Tasks
+    // var url = "https://api.myjson.com/bins/402ch"; // No Tasks
+    var url = "https://api.myjson.com/bins/2ac4h"; // Not authenticated
     // var url = "https://navlabsdev.appiancloud.com/suite/webapi/usertasklist?username=cpage";
-    var output;
 
     $.getJSON(url)
     .done(function(data) {
-      renderSuccess($("#task-list-container"), data[0]);
+      // console.log(data);
+      if(data.error && data.error === ERROR_CODE_NOT_AUTH) {
+        displayErrorNotAuth(data);
+      } else {
+        displayTaskList(data);        
+      }
     })
     .fail(function(xhr, textStatus, errorThrown) {
       console.log(xhr);
       console.log(textStatus);
       console.log(errorThrown);
 
-      renderError($("#task-list-container"), xhr);
+      displayGeneralError(xhr);
     })
 
   }
 
-  function renderSuccess($target, data) {
+  function displayTaskList(data) {
     data["columnLabels"] = ["Task Name", "Received", "Assignee/Owner", "Status", "Process"];
-    data["columnIds"] = ["c0","c1","c2","c3","c4"];
     data["taskLinkRoute"] = DOMAIN_BASE + TASK_LIST_ROUTE;
-
-    console.log(data);
 
     $.get('views/taskList.html', function(template) {
       var rendered = Mustache.render(template, {
         title: "My Current Tasks",
-        instructions: "View your current tasks and select one to open it in a new tab.",
+        instructions: "View your active tasks and select one to open it in a new tab.",
         data: data
       });
-      $($target).html(rendered);
+      $($targetContainer).html(rendered);
     });
   }
 
-  function renderError($target, data) {
+  function displayErrorNotAuth(data) {
+    data["showNotAuthSection"] = true;
+
+    $.get('views/error.html', function(template) {
+      var rendered = Mustache.render(template, {
+        title: data.title,
+        instructions: data.message
+      });
+      $($targetContainer).html(rendered);
+    });
+  }
+
+  function displayGeneralError(data) {
     $.get('views/error.html', function(template) {
       var rendered = Mustache.render(template, {
         title: "Error: " + data.status,
         instructions: data.responseText
       });
-      $($target).html(rendered);
+      $($targetContainer).html(rendered);
     });
   }
 
