@@ -178,11 +178,8 @@
 
 .nl-gtaskList-parent-container a:hover {
   color: #ee6615;
-  text-decoration: none;
 }
 
-
-.center {
-  margin-left: auto;
-  margin-right: auto;
+a:hover {
+  text-decoration: none;
 }

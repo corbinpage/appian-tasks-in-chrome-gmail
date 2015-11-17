@@ -6,7 +6,7 @@ $(function() {
   var USERNAME = "corbin@nav-labs.com";
 
   function run() {
-    var url = "https://api.myjson.com/bins/3i6o9";
+    var url = "https://api.myjson.com/bins/476fx";
     // var url = "https://navlabsdev.appiancloud.com/suite/webapi/usertasklist?username=cpage";
     var output;
 
@@ -27,6 +27,7 @@ $(function() {
   function renderSuccess($target, data) {
     data["columnLabels"] = ["Task Name", "Received", "Assignee/Owner", "Status", "Process"];
     data["columnIds"] = ["c0","c1","c2","c3","c4"];
+    data["taskLinkRoute"] = DOMAIN_BASE + TASK_LIST_ROUTE;
 
     console.log(data);
 

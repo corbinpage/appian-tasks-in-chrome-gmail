@@ -13,15 +13,15 @@
 						</tr>
 					</thead>
 					<tbody>
-						{{#data.data}}
+						{{#data.displayTasks}}
 						<tr>
-							<td><a href="#{{c9}}" target="_blank">{{c10}}</a></td>
-							<td>{{c15}}</td>
-							<td>{{c7}}</td>
-							<td>{{c14}}</td>
-							<td>{{c22}}</td>
+							<td><a href="{{data.taskLinkRoute}}{{taskId}}" target="_blank">{{name}}</a></td>
+							<td>{{startTime}}</td>
+							<td>{{assigneesOwners}}</td>
+							<td>{{status}}</td>
+							<td>{{process}}</td>
 						</tr>
-						{{/data.data}}
+						{{/data.displayTasks}}
 					</tbody>
 				</table>
 			</div>
