@@ -29,6 +29,7 @@
   "permissions": [
     "https://mail.google.com/",
     "https://inbox.google.com/",
+    "https://navlabsdev.appiancloud.com/",
     "activeTab"
   ],
   "manifest_version": 2
