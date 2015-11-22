@@ -4,18 +4,33 @@
   "version": "0.1",
   "browser_action": {
     "default_icon": "chrome-extension/spy-icon-19.png",
-    "default_title": "Appian Tasks in Gmail",
-    "default_popup": "popup.html"
+    "default_title": "Blast the typo!",
+    "default_popup": "chrome-extension/popup.html"
   },
-  "permissions": [
-    "activeTab",
-    "storage",
-    "https://mail.google.com/",
-    "https://api.myjson.com/"
+  "content_scripts": [
+    {
+      "matches": [
+        "https://mail.google.com/*",
+        "https://inbox.google.com/*"
+      ],
+      "js": ["inboxsdk.js","jquery-1.11.1.min.js","content.js","tempo.nocache.js","taskDataJson.json"],
+      "css":[ "style.css", 
+              "suite/tempo/css/table.css",
+              "suite/tempo/ui/font-awesome/css/font-awesome.min.css",
+              "suite/tempo/ui/lightbox/lightbox.css",
+              "suite/tempo/css/appian-style-a.css",
+              "suite/tempo/css/appian-style-b.css",
+              "suite/tempo/css/appian-style-c.css",
+              "suite/tempo/css/appian-style-d.css",
+              "suite/tempo/css/appian-style-e.css"],
+      "run_at": "document_end"
+    }
   ],
-  "optional_permissions": [
-    "https://*/",
-    "http://*/"
+  "permissions": [
+    "https://mail.google.com/",
+    "https://inbox.google.com/",
+    "https://navlabsdev.appiancloud.com/",
+    "activeTab"
   ],
   "manifest_version": 2
 }
