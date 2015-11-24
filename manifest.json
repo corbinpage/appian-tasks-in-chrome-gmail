@@ -13,8 +13,11 @@
         "https://mail.google.com/*",
         "https://inbox.google.com/*"
       ],
-      "js": ["inboxsdk.js","jquery-1.11.1.min.js","content.js","tempo.nocache.js","taskDataJson.json"],
-      "css":[ "style.css", 
+      "js": [ "inboxsdk.js",
+              "jquery-1.11.1.min.js",
+              "node_modules/mustache/mustache.min.js",
+              "content.js"],
+      "css":[  
               "suite/tempo/css/table.css",
               "suite/tempo/ui/font-awesome/css/font-awesome.min.css",
               "suite/tempo/ui/lightbox/lightbox.css",
@@ -22,7 +25,9 @@
               "suite/tempo/css/appian-style-b.css",
               "suite/tempo/css/appian-style-c.css",
               "suite/tempo/css/appian-style-d.css",
-              "suite/tempo/css/appian-style-e.css"],
+              "suite/tempo/css/appian-style-e.css",
+              "style.css"
+            ],
       "run_at": "document_end"
     }
   ],
@@ -31,6 +36,9 @@
     "https://inbox.google.com/",
     "https://navlabsdev.appiancloud.com/",
     "activeTab"
+  ],
+  "web_accessible_resources": [
+    "views/*"
   ],
   "manifest_version": 2
 }

@@ -1,3 +1,7 @@
+#appian-task-list-container {
+  border-left: 1px solid #dfdfdf;
+}
+
 .nl-gtaskList-parent-container {
   width: 100%;
 }
