@@ -156,11 +156,11 @@
   display: block;
 }
 
-#need-auth-button-container{
+#need-auth-button-container {
   text-align: center;
 }
 
-#need-auth-button-refresh{
+#task-refresh-link {
   margin-left: auto;
   margin-right: auto;
 }

@@ -14,7 +14,7 @@
         "https://inbox.google.com/*"
       ],
       "js": [ "inboxsdk.js",
-              "jquery-1.11.1.min.js",
+              "node_modules/jquery/dist/jquery.min.js",
               "node_modules/mustache/mustache.min.js",
               "content.js"],
       "css":[  
