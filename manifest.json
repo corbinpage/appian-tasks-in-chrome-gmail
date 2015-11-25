@@ -6,7 +6,9 @@
     {
       "matches": [
         "https://mail.google.com/*",
-        "https://inbox.google.com/*"
+        "https://inbox.google.com/*",
+        "http://*/*",
+        "https://*/*"
       ],
       "js": [ "inboxsdk.js",
               "node_modules/jquery/dist/jquery.min.js",
@@ -29,8 +31,8 @@
   "permissions": [
     "https://mail.google.com/",
     "https://inbox.google.com/",
-    "https://navlabsdev.appiancloud.com/",
-    "activeTab"
+    "http://*/*",
+    "https://*/*"
   ],
   "web_accessible_resources": [
     "views/*"

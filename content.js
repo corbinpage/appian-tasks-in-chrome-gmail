@@ -1,20 +1,21 @@
-// InboxSDK.load(1, 'sdk_appian-tasks_8f26985331').then(function(sdk) {
-	$(function() {
+InboxSDK.load(1, 'sdk_appian-tasks_8f26985331').then(function(sdk) {
+	// $(function() {
 
 		var routeID = 'appian/tasks/assignedtome';
 		var ERROR_CODE_NOT_AUTH = "APNX-1-4187-000";
 		var DOMAIN_BASE = "https://navlabsdev.appiancloud.com/suite";
+		var manifest = chrome.runtime.getManifest();
 		var WEB_API_ROUTE = "/webapi/usertasklist";
 		var TASK_LIST_ROUTE = "/tempo/tasks/assignedtome";
 		var url = DOMAIN_BASE + WEB_API_ROUTE;
 
-	// sdk.Router.handleCustomRoute(routeID, function(customRouteView){
-		// displayContainer($(customRouteView.getElement()));
-		displayContainer($("#local-container"));
+	sdk.Router.handleCustomRoute(routeID, function(customRouteView){
+		displayContainer($(customRouteView.getElement()));
+		// displayContainer($("#local-container"));
 		displayWaiting();
 		getTaskListData();
 
-	// });
+	});
 
 
 function getTaskListData() {
@@ -29,7 +30,6 @@ function getTaskListData() {
 	.fail(function(xhr, textStatus, errorThrown) {
 		console.log("Error: " + errorThrown);
 		console.log(xhr);
-
 		if( xhr.status === 401 ) {
 			displayErrorNotAuth();
 		} else {
@@ -76,15 +76,15 @@ function displayGeneralError(data) {
 
 function renderTemplate(templateFile, data) {
 	$.get(chrome.extension.getURL('/views/' + templateFile), function(template) {
-		var rendered = Mustache.render(template, thisData);
+		var rendered = Mustache.render(template, data);
 		$( "#appian-task-list-target" ).html(rendered);
 	});
 }
 
-// sdk.NavMenu.addNavItem({
-// 	name: 'Appian - My Tasks',
-// 	routeID: routeID,
-// 	routeParams: {state: 'TaskList'}
-// });
+sdk.NavMenu.addNavItem({
+	name: 'Appian - My Tasks',
+	routeID: routeID,
+	routeParams: {state: 'TaskList'}
+});
 
 });
