@@ -12,7 +12,6 @@
 		// displayContainer($(customRouteView.getElement()));
 		displayContainer($("#local-container"));
 		displayWaiting();
-		// displayFormatted();
 		getTaskListData();
 
 	// });
@@ -48,7 +47,6 @@ function displayContainer($parent) {
 		$parent.html(rendered);
 
 		$( ".task-refresh-link" ).click(function() {
-			console.log("Refresh clicked");
 			displayWaiting();
 			getTaskListData();
 		});
@@ -78,7 +76,7 @@ function displayGeneralError(data) {
 
 function renderTemplate(templateFile, data) {
 	$.get(chrome.extension.getURL('/views/' + templateFile), function(template) {
-		var rendered = Mustache.render(template, data);
+		var rendered = Mustache.render(template, thisData);
 		$( "#appian-task-list-target" ).html(rendered);
 	});
 }

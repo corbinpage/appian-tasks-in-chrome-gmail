@@ -2,32 +2,20 @@
   "name": "appian-tasks-in-gmail",
   "version": "0.0.1",
   "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
   "dependencies": {
-    "body-parser": "^1.14.1",
     "bootstrap": "^3.3.5",
-    "cookie-parser": "^1.4.0",
-    "debug": "^2.2.0",
-    "express": "^4.13.3",
-    "handlebars": "^4.0.4",
     "jquery": "^2.1.4",
-    "morgan": "^1.6.1",
-    "mustache": "^2.2.0",
-    "serve-favicon": "^2.3.0",
-    "underscore": "^1.8.3",
-    "underscore.string": "^3.2.2"
+    "mustache": "^2.2.0"
   },
   "description": "Display Appian tasks in Gmail",
-  "main": "app.js",
+  "main": "content.js",
   "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "https://github.com/corbinpage/appian-tasks-in-chrome-gmail"
   },
   "author": "Corbin Page",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/corbinpage/appian-tasks-in-chrome-gmail/issues"
   },
