@@ -6,9 +6,7 @@
     {
       "matches": [
         "https://mail.google.com/*",
-        "https://inbox.google.com/*",
-        "http://*/*",
-        "https://*/*"
+        "https://inbox.google.com/*"
       ],
       "js": [ "inboxsdk.js",
               "node_modules/jquery/dist/jquery.min.js",
@@ -31,8 +29,7 @@
   "permissions": [
     "https://mail.google.com/",
     "https://inbox.google.com/",
-    "http://*/*",
-    "https://*/*"
+    "storage"
   ],
   "web_accessible_resources": [
     "views/*"
