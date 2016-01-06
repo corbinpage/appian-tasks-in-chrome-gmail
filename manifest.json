@@ -32,7 +32,8 @@
     "storage"
   ],
   "web_accessible_resources": [
-    "views/*"
+    "views/*",
+    "inject.js"
   ],
   "manifest_version": 2
 }
